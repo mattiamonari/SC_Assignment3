@@ -1,0 +1,60 @@
+Matrix size: (625, 625)
+np.linalg.eig(): 0.41521787643432617
+np.linalg.eigh(): 0.03789067268371582
+scipy.sparse.linalg.eigs(): 0.028369665145874023
+Matrix size: (1250, 1250)
+np.linalg.eig(): 1.539001226425171
+np.linalg.eigh(): 0.22838878631591797
+scipy.sparse.linalg.eigs(): 0.049581289291381836
+Matrix size: (489, 489)
+np.linalg.eig(): 0.12378644943237305
+np.linalg.eigh(): 0.01825118064880371
+scipy.sparse.linalg.eigs(): 0.015363216400146484
+Matrix size: (625, 625)
+np.linalg.eig(): 0.263721227645874
+np.linalg.eigh(): 0.040874481201171875
+scipy.sparse.linalg.eigs(): 0.01609945297241211
+Matrix size: (1250, 1250)
+np.linalg.eig(): 1.542694330215454
+np.linalg.eigh(): 0.32192015647888184
+scipy.sparse.linalg.eigs(): 0.04596376419067383
+Matrix size: (489, 489)
+np.linalg.eig(): 0.15042400360107422
+np.linalg.eigh(): 0.01733851432800293
+scipy.sparse.linalg.eigs(): 0.016930103302001953
+Matrix size: (625, 625)
+np.linalg.eig(): 0.2370009422302246
+np.linalg.eigh(): 0.03518509864807129
+scipy.sparse.linalg.eigs(): 0.038840532302856445
+Matrix size: (1250, 1250)
+np.linalg.eig(): 1.356776237487793
+np.linalg.eigh(): 0.3257153034210205
+scipy.sparse.linalg.eigs(): 0.040605783462524414
+Matrix size: (489, 489)
+np.linalg.eig(): 0.09312272071838379
+np.linalg.eigh(): 0.01648402214050293
+scipy.sparse.linalg.eigs(): 0.009194135665893555
+Matrix size: (625, 625)
+np.linalg.eig(): 0.25771641731262207
+np.linalg.eigh(): 0.034772396087646484
+scipy.sparse.linalg.eigs(): 0.015345335006713867
+Matrix size: (1250, 1250)
+np.linalg.eig(): 1.5995755195617676
+np.linalg.eigh(): 0.24837827682495117
+scipy.sparse.linalg.eigs(): 0.03458261489868164
+Matrix size: (489, 489)
+np.linalg.eig(): 0.1130671501159668
+np.linalg.eigh(): 0.016279935836791992
+scipy.sparse.linalg.eigs(): 0.014943361282348633
+Matrix size: (625, 625)
+np.linalg.eig(): 0.24790644645690918
+np.linalg.eigh(): 0.04325580596923828
+scipy.sparse.linalg.eigs(): 0.01972484588623047
+Matrix size: (1250, 1250)
+np.linalg.eig(): 1.1878879070281982
+np.linalg.eigh(): 0.25103044509887695
+scipy.sparse.linalg.eigs(): 0.030939579010009766
+Matrix size: (489, 489)
+np.linalg.eig(): 0.08661913871765137
+np.linalg.eigh(): 0.017630815505981445
+scipy.sparse.linalg.eigs(): 0.010947465896606445
