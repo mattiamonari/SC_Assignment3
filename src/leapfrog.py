@@ -97,7 +97,7 @@ def create_force_function(k, forced):
         return lambda t, x: -k * x + np.sin(t)
     return lambda t, x: -k * x
 
-def run_leapfrog_experiment(m, k_values, x0, v0, t_end, dt_values, forced=False):
+def run_leapfrog_experiment(m, k_values, x0, v0, t_end, dt_values, forced=False, savefig=False, directory=None):
     plt.figure(figsize=(10, 6))
     # Plot position for different dt values
     for k_idx, k in enumerate(k_values):
@@ -158,9 +158,11 @@ def run_leapfrog_experiment(m, k_values, x0, v0, t_end, dt_values, forced=False)
     plt.legend(loc='best', fontsize='small')
 
     plt.tight_layout()
+    if savefig:
+        plt.savefig(f"{directory}/leapfrog_experiment_forced={forced}.pdf")
     plt.show()
 
-def compare_with_rk(m, k_values, x0, v0, t_end, dt, forced=False):
+def compare_with_rk(m, k_values, x0, v0, t_end, dt, forced=False, savefig=False, directory=None):
     for k in k_values:
         plt.figure(figsize=(10, 6))
         # Compare energy conservation: Leapfrog vs RK45
@@ -204,6 +206,8 @@ def compare_with_rk(m, k_values, x0, v0, t_end, dt, forced=False):
         plt.legend()
 
         plt.tight_layout()
+        if savefig:
+            plt.savefig(f"{directory}/rk_comparison_forced={forced}.pdf")
         plt.show()
 
 if __name__ == "__main__":
