@@ -78,8 +78,9 @@ def analytical_solution_forced(t, x0, v0, k, m):
     
     # Check for resonance case (k = m)
     if abs(k - m) < 1e-10:  # Numerical comparison to avoid floating point issues
-        x = x0 * np.cos(t) + (v0 - 0.5 / m) * np.sin(t) + (t * np.cos(t)) / (2 * m)
-        v = -x0 * np.sin(t) + (v0 - 0.5 / m) * np.cos(t) + (t * np.sin(t) - np.cos(t)) / (2 * m)
+        print(f"Resonance: {m}={k}")
+        x = x0 * np.cos(t) + (v0 + 0.5 / m) * np.sin(t) - (t * np.cos(t)) / (2 * m)
+        v = -x0 * np.sin(t) + (v0 + 0.5 / m) * np.cos(t) + (t * np.sin(t) - np.cos(t)) / (2 * m)
     else:
         x = x0 * np.cos(omega * t) + ((v0 - 1 / (k - m)) / omega) * np.sin(omega * t) + np.sin(t) / (k - m)
         v = -x0 * omega * np.sin(omega * t) + (v0 - 1 / (k - m)) * np.cos(omega * t) + np.cos(t) / (k - m)
@@ -207,27 +208,10 @@ def compare_with_rk(m, k_values, x0, v0, t_end, dt, forced=False, savefig=False,
 
         plt.tight_layout()
         if savefig:
-            plt.savefig(f"{directory}/rk_comparison_forced={forced}.pdf")
+            plt.savefig(f"{directory}/rk_comparison_k={k}_forced={forced}.pdf")
         plt.show()
 
 if __name__ == "__main__":
-    """
-    TODO: 
-        In general: 
-        1. Separate points (I) and (J) clearly
-        2. Clean the code
-        3. Check what happens with high/low dt
-        IDEA: - show energy conservation and phase space plots together for different dt
-                to show how dt affects energy conservation and solution accuracy
-              - show error convergence for different k values
-        
-        I)
-        1. Better show the accuracy of the method and how the initial velocity affects it
-
-        J)
-        1. Try different oscillation frequencies to show what happens when the oscillation matches the natural one
-        2. Show phase space plot of (v, x) for various frequencies
-    """ 
     # Parameters
     m = 1.0
     x0 = 1.0
@@ -235,7 +219,7 @@ if __name__ == "__main__":
     t_end = 5.0
     
     # Test different dt and k values
-    k_values = [0.5, 2.0, 5.0]
+    k_values = [1.0, 2.0, 5.0]
     dt_values = [0.01]
     
     # For standard harmonic oscillator
