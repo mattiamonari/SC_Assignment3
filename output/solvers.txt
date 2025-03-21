@@ -58,3 +58,15 @@ Matrix size: (489, 489)
 np.linalg.eig(): 0.08661913871765137
 np.linalg.eigh(): 0.017630815505981445
 scipy.sparse.linalg.eigs(): 0.010947465896606445
+Matrix size: (625, 625)
+np.linalg.eig(): 0.46150898933410645
+np.linalg.eigh(): 0.13846325874328613
+scipy.sparse.linalg.eigs(): 0.014980554580688477
+Matrix size: (1250, 1250)
+np.linalg.eig(): 1.4452979564666748
+np.linalg.eigh(): 0.5363807678222656
+scipy.sparse.linalg.eigs(): 0.0244905948638916
+Matrix size: (489, 489)
+np.linalg.eig(): 0.23708510398864746
+np.linalg.eigh(): 0.07818245887756348
+scipy.sparse.linalg.eigs(): 0.004859447479248047
