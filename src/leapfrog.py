@@ -78,11 +78,11 @@ def analytical_solution_forced(t, x0, v0, k, m):
     
     # Check for resonance case (k = m)
     if abs(k - m) < 1e-10:  # Numerical comparison to avoid floating point issues
-        x = x0 * np.cos(t) + v0 * np.sin(t) + (t * np.sin(t)) / (2 * m)
-        v = -x0 * np.sin(t) + v0 * np.cos(t) + (np.cos(t) - t * np.sin(t)) / (2 * m)
+        x = x0 * np.cos(t) + (v0 - 0.5 / m) * np.sin(t) + (t * np.cos(t)) / (2 * m)
+        v = -x0 * np.sin(t) + (v0 - 0.5 / m) * np.cos(t) + (t * np.sin(t) - np.cos(t)) / (2 * m)
     else:
-        x = x0 * np.cos(omega * t) + (v0/omega) * np.sin(omega * t) + np.sin(t) / (k - m)
-        v = -x0 * omega * np.sin(omega * t) + v0 * np.cos(omega * t) + np.cos(t) / (k - m)
+        x = x0 * np.cos(omega * t) + ((v0 - 1 / (k - m)) / omega) * np.sin(omega * t) + np.sin(t) / (k - m)
+        v = -x0 * omega * np.sin(omega * t) + (v0 - 1 / (k - m)) * np.cos(omega * t) + np.cos(t) / (k - m)
     
     return x, v
 
